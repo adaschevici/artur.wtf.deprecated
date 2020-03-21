@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "workspaces": ["artur-wtf-theme", "artur-wtf"]
+}
+
