@@ -1,0 +1,16 @@
+{
+  "name": "artur-wtf",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "artur-wtf-theme": "1.0.0",
+    "gatsby": "^2.20.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

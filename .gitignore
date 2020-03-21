@@ -104,3 +104,6 @@ dist
 .tern-port
 node_modules
 .DS_Store
+*/.cache
+*/yarn-error.log
+*/public

@@ -1,5 +1,9 @@
 {
   "private": true,
-  "workspaces": ["artur-wtf-theme", "artur-wtf"]
+  "workspaces": ["artur-wtf-theme", "artur-wtf"],
+  "scripts": {
+    "start": "npx yarn workspace artur-wtf develop",
+    "build": "npx yarn workspace artur-wtf build"
+  }
 }
 
