@@ -1,7 +1,7 @@
 module.exports = ({ basePath = `/`, mdx = true }) => ({
   siteMetadata: {
     siteTitle: `Artur Das`,
-    siteTitleAlt: `Artur @artur-wtf/gatsby-artur-wtf-theme`,
+    siteTitleAlt: `Artur artur-wtf-theme`,
     siteHeadline: `Artur Das - Gatsby Theme from @artur-wtf`,
     siteUrl: `https://artur.wtf`,
     siteDescription: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
