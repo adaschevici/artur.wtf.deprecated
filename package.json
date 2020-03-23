@@ -1,10 +1,12 @@
 {
   "private": true,
-  "workspaces": ["artur-wtf-theme", "artur-wtf"],
+  "workspaces": [
+    "artur-wtf-theme",
+    "artur-wtf"
+  ],
   "scripts": {
-    "start": "rm -rf artur-wtf/.cache && npx yarn workspace artur-wtf develop",
+    "start": "if [ -d \"artur-wtf/.cache\" ]; then rm -Rf artur-wtf/.cache; fi && npx yarn workspace artur-wtf develop",
     "build": "npx yarn workspace artur-wtf build",
     "clean": "rm -rf artur-wtf/.cache"
   }
 }
-

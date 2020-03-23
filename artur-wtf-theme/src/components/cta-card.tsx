@@ -2,21 +2,19 @@
 import React from "react"
 import { jsx } from "theme-ui"
 
-type ProjectCardProps = {
+type CTACardProps = {
+  callToAction: string
   link: string
-  title: string
-  children: React.ReactNode
   bg: string
 }
 
-const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
+const CTACard = ({ link, callToAction, bg }: CTACardProps) => (
   <a
     href={link}
     target="_blank"
     rel="noreferrer noopener"
     sx={{
       width: `100%`,
-      boxShadow: `lg`,
       position: `relative`,
       textDecoration: `none`,
       borderRadius: `lg`,
@@ -32,20 +30,19 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
       },
     }}
   >
-    <div sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
     <div
       sx={{
-        textTransform: `uppercase`,
         letterSpacing: `wide`,
-        pt: 4,
+        pt: 2,
         fontSize: [4, 5],
         fontWeight: `medium`,
         lineHeight: 1,
       }}
     >
-      {title}
+      {callToAction}
     </div>
   </a>
 )
 
-export default ProjectCard
+export default CTACard
+

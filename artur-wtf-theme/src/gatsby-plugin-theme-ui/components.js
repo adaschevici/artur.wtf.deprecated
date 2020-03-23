@@ -3,6 +3,7 @@ import ProjectCard from "../components/project-card"
 import JobCard from "../components/job-card"
 import ContributionCard from "../components/contribution-card"
 import HeroHeader from "../components/hero-header"
+import CTACard from "../components/cta-card"
 
 export default {
   // eslint-disable-next-line react/display-name
@@ -28,5 +29,9 @@ export default {
     <HeroHeader>
       {children}
     </HeroHeader>
+  ),
+  // eslint-disable-next-line react/display-name
+  CTACard: ({ link, callToAction, bg }) => (
+    <CTACard link={link} callToAction={callToAction} bg={bg} />
   ),
 }
