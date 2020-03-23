@@ -7,9 +7,11 @@ type JobCardProps = {
   title: string
   children: React.ReactNode
   bg: string
+  period: string
+  role: string
 }
 
-const JobCard = ({ link, title, children, bg }: JobCardProps) => (
+const JobCard = ({ link, title, children, bg, period, role }: JobCardProps) => (
   <a
     href={link}
     target="_blank"
@@ -33,16 +35,28 @@ const JobCard = ({ link, title, children, bg }: JobCardProps) => (
     }}
   >
     <div sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
-    <div
-      sx={{
-        letterSpacing: `wide`,
-        pt: 4,
-        fontSize: [4, 5],
-        fontWeight: `medium`,
-        lineHeight: 1,
-      }}
-    >
-      {title}
+    <div>
+      <div
+        sx={{
+          letterSpacing: `wide`,
+          pt: 4,
+          fontSize: [4, 5],
+          fontWeight: `medium`,
+          lineHeight: 1,
+        }}
+      >
+        {title}
+      </div>
+      <div
+        sx={{
+          fontStyle: `italic`
+        }}
+      >
+        {role}
+      </div>
+      <div>
+        {period}
+      </div>
     </div>
   </a>
 )

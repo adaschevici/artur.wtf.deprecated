@@ -162,7 +162,7 @@ const logo = {
             cy="25.376"
             cx="19.441"
             strokeDasharray="null"
-            r="0INVALID"
+            r="0"
             fill="#010101"
         />
         <path
@@ -487,6 +487,19 @@ type SVGProps = {
   hiddenMobile?: boolean
 }
 
+type Position = "relative" | "absolute"
+
+type LogoProps = {
+  stroke?: boolean
+  color?: string | number | any
+  width: number
+  icon: IconType
+  left: string
+  top: string
+  hiddenMobile?: boolean
+  position?: Position
+}
+
 const defaultProps = {
   stroke: false,
   hiddenMobile: false,
@@ -510,10 +523,10 @@ const SVG = ({ stroke, color, width, icon, left, top, hiddenMobile }: SVGProps) 
   </svg>
 )
 
-export const Logo = ({ stroke, color, width, icon, left, top, hiddenMobile }: SVGProps) => (
+export const Logo = ({ stroke, color, width, left, top, hiddenMobile, position }: LogoProps) => (
   <svg
     sx={{
-      position: `absolute`,
+      position: position || `absolute`,
       stroke: stroke ? `currentColor` : `none`,
       fill: stroke ? `none` : `currentColor`,
       display: hiddenMobile ? hidden : `block`,
