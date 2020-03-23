@@ -2,13 +2,12 @@
 import { jsx } from "theme-ui"
 import SectionWrapper from "./section-wrapper"
 // @ts-ignore
-import JobsMDX from "../sections/jobs"
+import ContributionsMDX from "../sections/contributions"
 
-const Jobs = ({ offset, factor = 2 }: { offset: number; factor?: number }) => (
+const Contributions = ({ offset, factor = 2 }: { offset: number; factor?: number }) => (
   <SectionWrapper offset={offset} factor={factor} slantDirection="right">
-    <JobsMDX />
+    <ContributionsMDX />
   </SectionWrapper>
 )
 
-export default Jobs
-
+export default Contributions
