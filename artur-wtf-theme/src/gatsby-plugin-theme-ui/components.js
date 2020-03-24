@@ -19,8 +19,8 @@ export default {
     </JobCard>
   ),
   // eslint-disable-next-line react/display-name
-  ContributionCard: ({ link, title, bg, children }) => (
-    <ContributionCard link={link} title={title} bg={bg}>
+  ContributionCard: ({ videoSource, title, bg, children }) => (
+    <ContributionCard videoSource={videoSource} title={title} bg={bg}>
       {children}
     </ContributionCard>
   ),

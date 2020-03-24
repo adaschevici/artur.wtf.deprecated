@@ -13,13 +13,13 @@ import theme from "../gatsby-plugin-theme-ui"
 const ArturWtf = () => (
   <ThemeProvider theme={theme}>
     <Layout>
-      <Parallax pages={9}>
+      <Parallax pages={10}>
         <Hero offset={0} factor={1} />
         <Jobs offset={1} factor={2} />
         <Projects offset={3.3} factor={1.5} />
         <Contributions offset={5.5} factor={2} />
-        <About offset={7} factor={1} />
-        <Contact offset={8} factor={1} />
+        <About offset={8} factor={1} />
+        <Contact offset={9} factor={1} />
       </Parallax>
     </Layout>
   </ThemeProvider>

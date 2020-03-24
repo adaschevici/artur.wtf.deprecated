@@ -523,6 +523,7 @@ const SVG = ({ stroke, color, width, icon, left, top, hiddenMobile }: SVGProps) 
   </svg>
 )
 
+
 export const Logo = ({ stroke, color, width, left, top, hiddenMobile, position }: LogoProps) => (
   <svg
     sx={{
