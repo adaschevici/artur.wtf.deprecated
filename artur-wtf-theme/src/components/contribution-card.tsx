@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx } from "theme-ui"
+import VideoEmbed from "./video-embed"
 
-type ProjectCardProps = {
+type ContributionCardProps = {
   link: string
   title: string
   children: React.ReactNode
@@ -10,7 +11,7 @@ type ProjectCardProps = {
   videoSource?: string
 }
 
-const ContributionCard = ({ videoSource, title, children, bg }: ProjectCardProps) => (
+const ContributionCard = ({ videoSource, title, children, bg }: ContributionCardProps) => (
   <a
     target="_blank"
     rel="noreferrer noopener"
@@ -32,14 +33,7 @@ const ContributionCard = ({ videoSource, title, children, bg }: ProjectCardProps
       },
     }}
   >
-    {videoSource && <iframe
-      width="420"
-      height="265"
-      src={videoSource}
-      frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>}
+    {videoSource && <VideoEmbed videoSource={videoSource} />}
     <div sx={{ opacity: 0.85, textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)` }}>{children}</div>
     <div
       sx={{
