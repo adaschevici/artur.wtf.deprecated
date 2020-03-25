@@ -15,8 +15,8 @@ const ArturWtf = () => (
       <Jobs offset={1.5} factor={2} />
       <Projects offset={3.8} factor={1.5} />
       <Contributions offset={5.8} factor={2} />
-      <About offset={8.5} factor={1} />
-      <Contact offset={9.5} factor={1} />
+      <About offset={8.9} factor={1} />
+      <Contact offset={9.9} factor={1} />
     </Parallax>
   </Layout>
 )
