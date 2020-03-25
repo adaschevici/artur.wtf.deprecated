@@ -7,6 +7,7 @@ const defaultProps = {
   description: false,
   pathname: false,
   image: false,
+  defaultSiteIcon: false,
   children: null,
 }
 
@@ -15,10 +16,11 @@ type Props = {
   description?: string
   pathname?: string
   image?: string
+  siteIcon?:string
   children?: React.ReactNode
 }
 
-const SEO = ({ title, description, pathname, image, children }: Props) => {
+const SEO = ({ title, description, pathname, image, siteIcon, children }: Props) => {
   const site = useSiteMetadata()
 
   const {
@@ -28,6 +30,7 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
     siteDescription: defaultDescription,
     siteLanguage,
     siteImage: defaultImage,
+    siteIcon: defaultSiteIcon,
     author,
   } = site
 
@@ -36,6 +39,7 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,
+    icon: `${defaultSiteIcon}`
   }
   return (
     <Helmet title={title} defaultTitle={defaultTitle} titleTemplate={`%s | ${siteTitle}`}>
@@ -55,10 +59,10 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:image:alt" content={seo.description} />
       <meta name="twitter:creator" content={author} />
-      <meta name="gatsby-theme" content="@lekoarts/gatsby-theme-cara" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <meta name="gatsby-theme" content="@artur-wtf/artur-wtf-theme" />
+      <link rel="icon" type="image/svg" sizes="32x32" href={seo.icon} />
+      <link rel="icon" type="image/svg" sizes="16x16" href={seo.icon} />
+      <link rel="apple-touch-icon" sizes="180x180" href={seo.icon} />
       {children}
     </Helmet>
   )
