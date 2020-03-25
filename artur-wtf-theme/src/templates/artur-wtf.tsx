@@ -7,22 +7,18 @@ import Projects from "../components/projects"
 import Contributions from "../components/contributions"
 import About from "../components/about"
 import Contact from "../components/contact"
-import { ThemeProvider } from "theme-ui"
-import theme from "../gatsby-plugin-theme-ui"
 
 const ArturWtf = () => (
-  <ThemeProvider theme={theme}>
-    <Layout>
-      <Parallax pages={10.5}>
-        <Hero offset={0} factor={1} />
-        <Jobs offset={1.5} factor={2} />
-        <Projects offset={3.8} factor={1.5} />
-        <Contributions offset={5.8} factor={2} />
-        <About offset={8.5} factor={1} />
-        <Contact offset={9.5} factor={1} />
-      </Parallax>
-    </Layout>
-  </ThemeProvider>
+  <Layout>
+    <Parallax pages={10.4}>
+      <Hero offset={0} factor={1} />
+      <Jobs offset={1.5} factor={2} />
+      <Projects offset={3.8} factor={1.5} />
+      <Contributions offset={5.8} factor={2} />
+      <About offset={8.5} factor={1} />
+      <Contact offset={9.5} factor={1} />
+    </Parallax>
+  </Layout>
 )
 
 export default ArturWtf
