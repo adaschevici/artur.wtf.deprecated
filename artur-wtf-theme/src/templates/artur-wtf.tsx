@@ -10,7 +10,7 @@ import Contact from "../components/contact"
 
 const ArturWtf = () => (
   <Layout>
-    <Parallax pages={10.4}>
+    <Parallax pages={10.7}>
       <Hero offset={0} factor={1} />
       <Jobs offset={1.5} factor={2} />
       <Projects offset={3.8} factor={1.5} />
