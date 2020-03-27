@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { jsx } from "theme-ui"
 import VideoEmbed from "./video-embed"
 
@@ -12,7 +13,7 @@ type ContributionCardProps = {
 }
 
 const ContributionCard = ({ videoSource, title, children, bg }: ContributionCardProps) => (
-  <a
+  <OutboundLink
     target="_blank"
     rel="noreferrer noopener"
     sx={{
@@ -46,7 +47,7 @@ const ContributionCard = ({ videoSource, title, children, bg }: ContributionCard
     >
       {title}
     </div>
-  </a>
+  </OutboundLink>
 )
 
 export default ContributionCard
