@@ -13,6 +13,15 @@ module.exports = ({ basePath = `/`, mdx = true }) => ({
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        anonymize: true,
+        trackingId: "UA-118770025-2",
+        respectDNT: true,
+        cookieDomain: "artur.wtf",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sections`,

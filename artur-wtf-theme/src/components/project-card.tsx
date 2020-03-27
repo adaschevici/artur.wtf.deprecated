@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { jsx } from "theme-ui"
 
 type ProjectCardProps = {
@@ -10,7 +11,7 @@ type ProjectCardProps = {
 }
 
 const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
-  <a
+  <OutboundLink
     href={link}
     target="_blank"
     rel="noreferrer noopener"
@@ -44,7 +45,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
     >
       {title}
     </div>
-  </a>
+  </OutboundLink>
 )
 
 export default ProjectCard

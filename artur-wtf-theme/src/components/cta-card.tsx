@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import React from "react"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { jsx } from "theme-ui"
 
 type CTACardProps = {
@@ -9,7 +10,7 @@ type CTACardProps = {
 }
 
 const CTACard = ({ link, callToAction, bg }: CTACardProps) => (
-  <a
+  <OutboundLink
     href={link}
     target="_blank"
     rel="noreferrer noopener"
@@ -41,7 +42,7 @@ const CTACard = ({ link, callToAction, bg }: CTACardProps) => (
     >
       {callToAction}
     </div>
-  </a>
+  </OutboundLink>
 )
 
 export default CTACard
