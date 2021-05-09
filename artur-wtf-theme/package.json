@@ -34,7 +34,7 @@
     "gatsby-source-filesystem": "^2.1.55",
     "react-helmet": "^6.0.0",
     "react-spring": "^8.0.27",
-    "theme-ui": "^0.2.52"
+    "theme-ui": "^0.8.0"
   },
   "keywords": [
     "gatsby",
