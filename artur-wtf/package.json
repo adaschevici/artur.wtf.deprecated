@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "artur-wtf-theme": "1.0.0",
-    "gatsby": "^2.20.2",
+    "gatsby": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
