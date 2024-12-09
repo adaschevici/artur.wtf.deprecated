@@ -33,7 +33,7 @@
     "gatsby-plugin-typescript": "^2.2.3",
     "gatsby-source-filesystem": "^2.1.55",
     "react-helmet": "^6.0.0",
-    "react-spring": "^8.0.27",
+    "react-spring": "^9.0.0",
     "theme-ui": "^0.2.52"
   },
   "keywords": [
